@@ -1,0 +1,9 @@
+[
+    {
+        "id" : 0,
+        "time_stamp" : { },
+        "proof_of_work" : 0,
+        "hash" : 0,
+        "previous_hash" : 0
+    }
+]
