@@ -6,6 +6,6 @@ export class Block {
         public time_stamp : string,
         public proof_of_work : number,
         public hash : string,
-        public previous_hash : string
+        public previous_hash : string | undefined
     ) { }
 }

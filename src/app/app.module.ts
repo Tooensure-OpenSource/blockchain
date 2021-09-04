@@ -1,30 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BlockItemComponent } from './components/blockchain/block/block-list/block-item/block-item.component';
-import { BlockListComponent } from './components/blockchain/block/block-list/block-list.component';
-import { BlockComponent } from './components/blockchain/block/block.component';
-import { BlockchainItemComponent } from './components/blockchain/blockchain-list/blockchain-item/blockchain-item.component';
-import { BlockchainListComponent } from './components/blockchain/blockchain-list/blockchain-list.component';
-import { BlockchainComponent } from './components/blockchain/blockchain.component';
+import { DataStorageService } from './shared/data-storage.service';
+import { BlockComponent } from './components/block/block.component';
+import { BlockListComponent } from './components/block/block-list/block-list.component';
+import { BlockItemComponent } from './components/block/block-list/block-item/block-item.component';
+import { BlockService } from './components/block/block.service';
+import { BlockchainComponent } from './pages/blockchain/blockchain.component';
+import { MiningComponent } from './pages/mining/mining.component';
+import { EcoinComponent } from './components/ecoin/ecoin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlockchainComponent,
-    BlockchainListComponent,
-    BlockchainItemComponent,
     BlockComponent,
     BlockListComponent,
-    BlockItemComponent
+    BlockItemComponent,
+    BlockchainComponent,
+    MiningComponent,
+    EcoinComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    BlockService,
+    DataStorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlockchainItemComponent } from './blockchain-item.component';
+import { MiningComponent } from './mining.component';
 
-describe('BlockchainItemComponent', () => {
-  let component: BlockchainItemComponent;
-  let fixture: ComponentFixture<BlockchainItemComponent>;
+describe('MiningComponent', () => {
+  let component: MiningComponent;
+  let fixture: ComponentFixture<MiningComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlockchainItemComponent ]
+      declarations: [ MiningComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlockchainItemComponent);
+    fixture = TestBed.createComponent(MiningComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
